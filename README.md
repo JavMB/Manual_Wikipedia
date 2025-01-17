@@ -19,131 +19,84 @@ Este manual tiene como objetivo guiar paso a paso a los usuarios para registrars
 
 ### Reglas al Elegir un Nombre de Usuario
 
-- Evita nombres promocionales o que representen empresas.
-- No uses nombres ofensivos o ambiguos.
-- Consulta las [Políticas de nombres de usuario](https://en.wikipedia.org/wiki/Wikipedia:Username_policy) para más detalles.
+- No uses nombres que puedan ser ofensivos.
+- Escoge un nombre que no parezca una marca o promoción.
+- Asegúrate de que sea fácil de recordar.
 
-![Captura de pantalla: Registro en Wikipedia](registro.png)
+![Registro en Wikipedia](registro.png)
 
 ---
 
 ## Edición de Artículos
 
-### Cómo Iniciar Sesión y Acceder al Editor
-1. Inicia sesión con tu nombre de usuario y contraseña.
-2. Busca un artículo existente o selecciona la opción "Crear un artículo".
-3. Haz clic en "Editar" en la parte superior del artículo para abrir el editor visual.
+### Acceder al Editor
 
-### Formato Básico
-- **Títulos**: Usa encabezados para estructurar tu artículo. Ejemplo:
-  ```markdown
-  == Encabezado Nivel 2 ==
-  === Encabezado Nivel 3 ===
+1. Inicia sesión con tu nombre de usuario y contraseña.
+2. Ve al artículo que quieres editar o selecciona "Crear un artículo nuevo".
+3. Haz clic en "Editar" para abrir el editor.
+
+### Escribir un Artículo
+
+- **Encabezados**: 
+  Usa éstos para organizar tu contenido:
+  ```
+  == Título Nivel 2 ==
+  === Título Nivel 3 ===
   ```
 
-- **Párrafos**: Simplemente escribe el texto en líneas separadas.
 - **Listas**:
-  - Listas numeradas:
-    ```markdown
-    1. Elemento 1
-    2. Elemento 2
+  - Viñetas:
     ```
-  - Listas con viñetas:
-    ```markdown
     - Elemento 1
     - Elemento 2
+    ```
+  - Numeradas:
+    ```
+    1. Paso 1
+    2. Paso 2
     ```
 
 - **Enlaces**:
   - Internos:
-    ```markdown
-    [[Artículo en Wikipedia]]
+    ```
+    [[Nombre del artículo]]
     ```
   - Externos:
-    ```markdown
-    [Sitio externo](https://www.example.com)
+    ```
+    [Enlace externo](https://ejemplo.com)
     ```
 
-### Uso de Plantillas y Referencias
-1. Usa plantillas como `{{Infobox}}` para añadir tablas de resumen.
-2. Añade referencias con la etiqueta `<ref>`. Ejemplo:
-   ```markdown
-   Este es un dato referenciado.<ref>Fuente: Libro de Ejemplo, 2025</ref>
-   ```
-
-### Ejemplo de Edición:
-```markdown
-== Historia ==
-Wikipedia fue creada en el año 2001.
-
-=== Referencias ===
-<references />
-```
+![Editor de Wikipedia](wiki1_large.jpg)
 
 ---
 
 ## Publicación de Artículos
 
-### Guardar y Publicar
-1. Haz clic en "Publicar cambios" después de completar tu edición.
-2. Escribe un resumen breve sobre los cambios realizados.
-3. Confirma que cumples con las [Políticas de Wikipedia](https://es.wikipedia.org/wiki/Wikipedia:Pol%C3%ADticas).
+1. Una vez termines, haz clic en "Publicar cambios".
+2. Escribe un resumen corto sobre lo que editaste.
+3. Asegúrate de cumplir con las reglas:
+   - Usa fuentes confiables.
+   - No incluyas contenido publicitario.
+   - Mantén un tono neutral.
 
-### Políticas Principales
-- **Verificabilidad**: Incluye fuentes confiables.
-- **Neutralidad**: Evita opiniones personales.
-- **Sin promoción**: Los artículos no deben parecer publicidad.
+![Publicar cambios](publicar.png)
 
 ---
 
 ## Geolocalización en Artículos
 
-### Cómo Añadir Coordenadas
-1. Accede al editor de texto (no el visual).
-2. Usa la plantilla `{{Coord}}`. Ejemplo:
-   ```markdown
-   {{Coord|37.7749|N|122.4194|W|type:landmark|display=title}}
-   ```
-   - `37.7749|N`: Latitud en grados.
-   - `122.4194|W`: Longitud en grados.
-   - `type`: Tipo de lugar (ejemplo: `city`, `landmark`).
-   - `display=title`: Muestra las coordenadas en la cabecera del artículo.
+### Añadir Coordenadas
 
-### Ejemplo:
-```markdown
-{{Coord|40.4168|N|3.7038|W|type:city|display=title}}
-```
-Esto añade coordenadas para Madrid, España.
+1. Ve al editor de texto (modo avanzado).
+2. Usa el siguiente formato para agregar coordenadas:
+   ```
+   {{Coord|LATITUD|N|LONGITUD|W|display=title}}
+   ```
+3. Ejemplo:
+   ```
+   {{Coord|40.4168|N|3.7038|W|display=title}}
+   ```
+   Esto añade coordenadas para Madrid, España.
 
 ---
-
-## Uso Externo
-
-### API de Wikipedia
-1. Accede a la API de Wikipedia desde [MediaWiki API](https://www.mediawiki.org/wiki/API:Main_page).
-2. Ejemplo de consulta para obtener datos geolocalizados:
-   ```bash
-   https://en.wikipedia.org/w/api.php?action=query&prop=coordinates&titles=Madrid&format=json
-   ```
-3. Respuesta JSON típica:
-   ```json
-   {
-       "query": {
-           "pages": {
-               "12345": {
-                   "title": "Madrid",
-                   "coordinates": [
-                       {
-                           "lat": 40.4168,
-                           "lon": -3.7038
-                       }
-                   ]
-               }
-           }
-       }
-   }
-   ```
-
----
-
 
