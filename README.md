@@ -88,7 +88,7 @@ Este manual tiene como objetivo guiar paso a paso a los usuarios para registrars
 ### Añadir Coordenadas
 
 1. Ve al editor de texto (modo avanzado).
-2. Usa el siguiente formato para agregar coordenadas:
+2. Usa el siguiente formato para agregar coordenadas: 
    ```
    {{Coord|LATITUD|N|LONGITUD|W|display=title}}
    ```
