@@ -1,4 +1,4 @@
-# Manual_Wikipedia
+# Manual Wikipedia
 
 ## Introducción
 Este manual tiene como objetivo guiar paso a paso a los usuarios para registrarse, editar, publicar artículos en Wikipedia y añadir geolocalización. Además, se explica cómo consultar los datos publicados desde herramientas externas.
